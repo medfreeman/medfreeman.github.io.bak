@@ -28,6 +28,10 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
               content: "width=device-width, initial-scale=1",
             },
             {
+              name: "apple-mobile-web-app-title",
+              content: pkg.name,
+            },
+            {
               name: "mobile-web-app-capable",
               content: "yes",
             },
@@ -37,7 +41,7 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
             },
             {
               name: "application-name",
-              content: pkg.description,
+              content: pkg.name,
             },
             {
               name: "msapplication-TileColor",
