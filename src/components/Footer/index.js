@@ -8,11 +8,24 @@ const Footer = () => (
     <p>
       <a
         href={ process.env.PHENOMIC_HOMEPAGE }
-        className={ styles.phenomicReference }
+        className={ styles.externalReference }
       >
         { "Website generated with " }
-        <span className={ styles.phenomicReferenceName }>
+        <span className={ styles.externalReferenceName }>
           {  `<${ process.env.PHENOMIC_NAME} />` }
+        </span>
+      </a>
+      <span className={ styles.externalReference }>
+        { " — " }
+      </span>
+      <a
+        href="https://facebook.github.io/react/"
+        className={ styles.externalReference }
+      >
+        { "Built with " }
+        <span className={ styles.externalReferenceName }>
+          <img alt="React icon" src="assets/react.svg" width="16" height="16" />
+          React
         </span>
       </a>
     </p>
