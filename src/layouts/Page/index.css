@@ -64,8 +64,8 @@
 
     &:hover {
       opacity: 1;
-      color: color(var(--colorPrimary) l(- 5%));
-      border-bottom-color: var(--colorPrimary);
+      color: color(var(--colorPrimary) l(- 20%));
+      text-decoration: none;
     }
   }
 
