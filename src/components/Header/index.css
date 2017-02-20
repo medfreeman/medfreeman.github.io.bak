@@ -7,6 +7,8 @@
   /* stretch */
   left: 0;
   right: 0;
+  padding-left: var(--contentHorizontalPadding);
+  padding-right: var(--contentHorizontalPadding);
 
   color: var(--colorNeutralLight);
 }
@@ -15,7 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: calc(var(--maxWidth) + (var(--nav-item-padding) * 2));
+  max-width: var(--maxWidth);
   margin: 0 auto;
   padding: 0;
   line-height: 3rem;
