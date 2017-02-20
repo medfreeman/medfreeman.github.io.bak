@@ -7,6 +7,8 @@ import PhenomicLoaderFeedWebpackPlugin
   from "phenomic/lib/loader-feed-webpack-plugin"
 import PhenomicLoaderSitemapWebpackPlugin
   from "phenomic/lib/loader-sitemap-webpack-plugin"
+import FaviconsWebpackPlugin
+  from "favicons-webpack-plugin"
 
 import pkg from "./package.json"
 
@@ -212,6 +214,32 @@ export default (config = {}) => {
         new webpack.optimize.UglifyJsPlugin(
           { compress: { warnings: false } }
         ),
+        new FaviconsWebpackPlugin({
+          logo: path.join(__dirname, "favicon.png"),
+          appName: pkg.name,
+          appDescription: pkg.description,
+          developerName: pkg.author,
+          developerURL: pkg.homepage,
+          prefix: "assets/",
+          persistentCache: false,
+          inject: false,
+          background: '#000',
+          display: 'browser',
+          orientation: 'portrait',
+          start_url: '',
+          icons: {
+            android: true,
+            appleIcon: true,
+            appleStartup: false,
+            coast: false,
+            favicons: true,
+            firefox: true,
+            opengraph: false,
+            twitter: false,
+            yandex: true,
+            windows: true
+          }
+        } )
       ],
     ],
 

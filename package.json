@@ -108,6 +108,7 @@
     "eslint-plugin-react": "^6.4.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
+    "favicons-webpack-plugin": "^0.0.7",
     "history": "^2.0.0",
     "npm-run-all": "^1.7.0",
     "postcss-browser-reporter": "^0.4.0",
