@@ -1,5 +1,5 @@
 ---
-title: Phenomic base theme
+title: practical IT solutions
 layout: Homepage
 hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
 # hero credit: https://www.flickr.com/photos/pslee999/15589950511/
@@ -40,5 +40,3 @@ and for colors and common CSS variables, you can modify ``postcss.config.js``.
 
 _You feel like the base theme is not enough or you just saw something wrong?_
 [Please help us make Phenomic better!](https://phenomic.io/contributing/)
-
----
