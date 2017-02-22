@@ -1,0 +1,11 @@
+.gallery {
+  padding: 0;
+}
+
+.element {
+  list-style-type: none;
+
+  & img {
+    max-width: 100%;
+  }
+}
