@@ -158,8 +158,21 @@ export default (config = {}) => {
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
-          loader: "raw-loader",
-
+          use: [
+            {
+              loader: 'file-loader'
+            },
+            {
+              loader: 'svgo-loader',
+              options: {
+                plugins: [
+                  { removeTitle: true, removeDesc: true },
+                  { convertColors: { shorthex: false } },
+                  { convertPathData: false },
+                ]
+              }
+            }
+          ]
         },
       ],
     },
