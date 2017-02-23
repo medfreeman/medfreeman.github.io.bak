@@ -230,6 +230,27 @@ export default (config = {}) => {
         disable: config.dev,
       }),
 
+      ...config.dev && [
+        new FaviconsWebpackPlugin({
+          logo: path.join(__dirname, "favicon.png"),
+          prefix: "assets/",
+          persistentCache: false,
+          inject: false,
+          icons: {
+            android: false,
+            appleIcon: false,
+            appleStartup: false,
+            coast: false,
+            favicons: true,
+            firefox: false,
+            opengraph: false,
+            twitter: false,
+            yandex: false,
+            windows: false,
+          },
+        }),
+      ],
+
       ...config.production && [
         new webpack.optimize.UglifyJsPlugin(
           { compress: { warnings: false } }
