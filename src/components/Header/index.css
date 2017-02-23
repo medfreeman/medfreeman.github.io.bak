@@ -11,6 +11,7 @@
   padding-right: var(--contentHorizontalPadding);
 
   color: var(--colorNeutralLight);
+  background-color: var(--colorPrimaryDark);
 
   height: var(--headerHeight);
 }
