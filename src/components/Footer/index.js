@@ -32,7 +32,7 @@ const Footer = () => (
             height="16px"
             cleanupExceptions={ [ "fill" ] }
           />
-          React
+          { "React" }
         </span>
       </a>
     </p>

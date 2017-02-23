@@ -7,28 +7,26 @@ const masonryOptions = {
   transitionDuration: 0,
 }
 
-class Gallery extends React.Component {
-  render() {
-    return (
-      <Masonry
-        className={ styles.gallery }
-        elementType={ "ul" }
-        options={ masonryOptions }
-        disableImagesLoaded={ false }
-        updateOnEachImageLoad={ false }
-      >
-        {
-          React.Children.map(this.props.children, (element) => {
-            return (
-              <li className={ styles.element }>
-                { element }
-              </li>
-            )
-          })
-        }
-      </Masonry>
-    )
-  }
+const Gallery = (props) => {
+  return (
+    <Masonry
+      className={ styles.gallery }
+      elementType={ "ul" }
+      options={ masonryOptions }
+      disableImagesLoaded={ false }
+      updateOnEachImageLoad={ false }
+    >
+      {
+        React.Children.map(props.children, (element) => {
+          return (
+            <li className={ styles.element }>
+              { element }
+            </li>
+          )
+        })
+      }
+    </Masonry>
+  )
 }
 
 Gallery.propTypes = {

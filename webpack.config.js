@@ -158,6 +158,7 @@ export default (config = {}) => {
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
+<<<<<<< HEAD
           use: [
             {
               loader: 'file-loader'
@@ -173,6 +174,12 @@ export default (config = {}) => {
               }
             }
           ]
+=======
+          loaders: [
+            "raw-loader",
+            "svgo-loader?useConfig=svgo",
+          ],
+>>>>>>> fix: pass meticulous eslint config compliance
         },
       ],
     },
@@ -236,10 +243,10 @@ export default (config = {}) => {
           prefix: "assets/",
           persistentCache: false,
           inject: false,
-          background: '#000',
-          display: 'browser',
-          orientation: 'portrait',
-          start_url: '',
+          background: "#000",
+          display: "browser",
+          orientation: "portrait",
+          start_url: "",
           icons: {
             android: true,
             appleIcon: true,
@@ -250,9 +257,9 @@ export default (config = {}) => {
             opengraph: false,
             twitter: false,
             yandex: true,
-            windows: true
-          }
-        } )
+            windows: true,
+          },
+        }),
       ],
     ],
 
