@@ -11,6 +11,8 @@
   padding-right: var(--contentHorizontalPadding);
 
   color: var(--colorNeutralLight);
+
+  height: var(--headerHeight);
 }
 
 .nav {

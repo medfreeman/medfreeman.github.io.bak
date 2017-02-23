@@ -7,6 +7,7 @@ module.exports = (config) => [
         variables: {
           maxWidth: "100vw",
           contentHorizontalPadding: "2.0rem",
+          headerHeight: "50px",
           colorPrimaryDark: "#107491",
           colorPrimary: "#007acc",
           colorSecondaryDark: "#22846C",
