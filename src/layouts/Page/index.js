@@ -1,10 +1,11 @@
 import React, { PropTypes } from "react"
 import Helmet from "react-helmet"
+import { Grid, Row } from "react-flexbox-grid/lib"
 import warning from "warning"
-import { BodyContainer, joinUri, Link } from "phenomic"
+import { BodyContainer, joinUri } from "phenomic"
 
-import Button from "../../components/Button"
 import Loading from "../../components/Loading"
+import Box from "../../components/Box"
 
 import styles from "./index.css"
 
@@ -56,28 +57,21 @@ const Page = (
         title={ metaTitle }
         meta={ meta }
       />
-      {
-        <div
-          className={ styles.hero }
-          style={ head.hero && {
-            background: `#111 url(${ head.hero }) 50% 50% / cover`,
-          } }
-        >
-          <div className={ styles.header }>
-            <div className={ styles.wrapper }>
-              <h1 className={ styles.heading }>{ head.title }</h1>
-              {
-                head.cta &&
-                <Link to={ head.cta.link }>
-                  <Button className={ styles.cta } light { ...head.cta.props }>
-                    { head.cta.label }
-                  </Button>
-                </Link>
-              }
-            </div>
-          </div>
-        </div>
-      }
+      <Grid className={ styles.grid } fluid>
+        <Row>
+          <Box type="row" xs={ 12 } lg={ 4 }>
+            { "Left!" }
+          </Box>
+          <Box type="row" xs={ 12 } lg={ 4 }>
+            { head.hero &&
+              <img alt="" src={ head.hero } width="100%" height="100%" />
+            }
+          </Box>
+          <Box type="row" xs={ 12 } lg={ 4 }>
+            { "Right!" }
+          </Box>
+        </Row>
+      </Grid>
       <div className={ styles.wrapper + " " + styles.pageContent }>
         { header }
         <div className={ styles.body }>
