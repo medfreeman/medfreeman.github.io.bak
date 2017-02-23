@@ -5,12 +5,12 @@ import Page from "../Page"
 
 const Portfolio = (props) => {
   const galleryElements = props.head.gallery ? props.head.gallery.map((element, index) => {
-    return(
+    return (
       <a key={ index } href={ element.url } target="_blank">
         <img src={ element.image } />
       </a>
     )
-  } ) : []
+  }) : []
 
   return (
     <Page { ...props }>
@@ -23,8 +23,8 @@ const Portfolio = (props) => {
 
 Portfolio.propTypes = {
   head: React.PropTypes.shape({
-    gallery: PropTypes.array
-  })
+    gallery: PropTypes.array,
+  }),
 }
 
 export default Portfolio

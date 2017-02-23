@@ -82,7 +82,7 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": "./node_modules/phenomic/lib/eslint-config-recommended/index.js"
+    "extends": "eslint-config-i-am-meticulous/react"
   },
   "stylelint": {
     "extends": "./node_modules/phenomic/lib/stylelint-config-recommended/index.js",
@@ -105,6 +105,7 @@
     "css-loader": "^0.28.0",
     "eslint": "^3.7.1",
     "eslint-loader": "^1.7.1",
+    "eslint-config-i-am-meticulous": "^5.0.2",
     "eslint-plugin-react": "^6.4.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "favicons-webpack-plugin": "^0.0.7",

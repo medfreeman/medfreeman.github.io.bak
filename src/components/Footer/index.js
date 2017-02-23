@@ -27,10 +27,10 @@ const Footer = () => (
         <span className={ styles.externalReferenceName }>
           <SVGInline
             className={ styles.reactSvg }
-            svg={require("../../images/react.svg")}
+            svg={ require("../../images/react.svg") }
             width="16px"
             height="16px"
-            cleanupExceptions={[ "fill" ]}
+            cleanupExceptions={ [ "fill" ] }
           />
           React
         </span>

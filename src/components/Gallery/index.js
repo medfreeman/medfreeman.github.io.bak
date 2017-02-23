@@ -4,7 +4,7 @@ import Masonry from "react-masonry-component"
 import styles from "./index.css"
 
 const masonryOptions = {
-    transitionDuration: 0
+  transitionDuration: 0,
 }
 
 class Gallery extends React.Component {
@@ -12,7 +12,7 @@ class Gallery extends React.Component {
     return (
       <Masonry
         className={ styles.gallery }
-        elementType={ 'ul' }
+        elementType={ "ul" }
         options={ masonryOptions }
         disableImagesLoaded={ false }
         updateOnEachImageLoad={ false }
@@ -24,7 +24,7 @@ class Gallery extends React.Component {
                 { element }
               </li>
             )
-          } )
+          })
         }
       </Masonry>
     )
@@ -32,7 +32,7 @@ class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 export default Gallery
