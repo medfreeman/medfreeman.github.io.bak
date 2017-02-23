@@ -158,7 +158,6 @@ export default (config = {}) => {
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
-<<<<<<< HEAD
           use: [
             {
               loader: 'file-loader'
@@ -174,12 +173,6 @@ export default (config = {}) => {
               }
             }
           ]
-=======
-          loaders: [
-            "raw-loader",
-            "svgo-loader?useConfig=svgo",
-          ],
->>>>>>> fix: pass meticulous eslint config compliance
         },
       ],
     },
