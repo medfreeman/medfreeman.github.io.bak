@@ -139,8 +139,11 @@ export default (config = {}) => {
         */
         {
           test: /\.css$/,
-          loader: 'style!css?modules',
-          include: /flexboxgrid/,
+          loader: 'style-loader!css-loader?modules',
+          include: [
+            /flexboxgrid/,
+            /driveway/
+          ]
         },
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).

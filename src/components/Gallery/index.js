@@ -1,31 +1,34 @@
 import React, { PropTypes } from "react"
-import Masonry from "react-masonry-component"
+import cx from "classnames"
+import driveway from "driveway/dist/driveway.css"
 
 import styles from "./index.css"
 
-const masonryOptions = {
-  transitionDuration: 0,
-}
-
 const Gallery = (props) => {
   return (
-    <Masonry
-      className={ styles.gallery }
-      elementType={ "ul" }
-      options={ masonryOptions }
-      disableImagesLoaded={ false }
-      updateOnEachImageLoad={ false }
-    >
+    <div className={ driveway.dw }>
       {
+        
         React.Children.map(props.children, (element) => {
           return (
-            <li className={ styles.element }>
-              { element }
-            </li>
+            <div className={ driveway["dw-panel"] }>
+              {
+                React.cloneElement(
+                  element,
+                  {
+                    className: cx(
+                      element.className,
+                      driveway["dw-panel__content"],
+                      styles.element,
+                    ),
+                  },
+                )
+              }
+            </div>
           )
         })
       }
-    </Masonry>
+    </div>
   )
 }
 
