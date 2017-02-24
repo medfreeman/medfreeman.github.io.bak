@@ -11,7 +11,14 @@ const Gallery = (props) => {
         
         React.Children.map(props.children, (element) => {
           return (
-            <div className={ driveway["dw-panel"] }>
+            <div
+              className={
+                cx(
+                  driveway["dw-panel"],
+                  styles.panel,
+                )
+              }
+            >
               {
                 React.cloneElement(
                   element,
