@@ -5375,7 +5375,7 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
 
-react-svg-inline@^1.1.0:
+react-svg-inline@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-svg-inline/-/react-svg-inline-1.2.0.tgz#a02bf81a0ed7615e3194a014b58d98aea5521fd5"
   dependencies:

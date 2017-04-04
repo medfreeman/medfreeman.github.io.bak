@@ -171,7 +171,7 @@ export default (config = {}) => {
           test: /\.svg$/,
           use: [
             {
-              loader: 'file-loader'
+              loader: 'raw-loader'
             },
             {
               loader: 'svgo-loader',
