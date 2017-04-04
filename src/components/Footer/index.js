@@ -1,5 +1,7 @@
 import React from "react"
-import SVGInline from "react-svg-inline"
+import Svg from "react-svg-inline"
+
+import reactSvg from "../icons/react.svg"
 
 import styles from "./index.css"
 
@@ -25,9 +27,9 @@ const Footer = () => (
       >
         { "Built with " }
         <span className={ styles.externalReferenceName }>
-          <SVGInline
+          <Svg
             className={ styles.reactSvg }
-            svg={ require("../../images/react.svg") }
+            svg={ reactSvg }
             width="16px"
             height="16px"
             cleanupExceptions={ [ "fill" ] }
