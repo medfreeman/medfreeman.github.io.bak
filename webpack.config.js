@@ -68,7 +68,7 @@ export default (config = {}) => {
           test: /\.css$/,
           exclude: [
             /\.global\.css$/,
-            /flexboxgrid/
+            /flexboxgrid/,
           ],
           include: path.resolve(__dirname, "src"),
           loader: ExtractTextPlugin.extract({
@@ -139,11 +139,11 @@ export default (config = {}) => {
         */
         {
           test: /\.css$/,
-          loader: 'style-loader!css-loader?modules',
+          loader: "style-loader!css-loader?modules",
           include: [
             /flexboxgrid/,
-            /driveway/
-          ]
+            /driveway/,
+          ],
         },
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).
@@ -171,19 +171,19 @@ export default (config = {}) => {
           test: /\.svg$/,
           use: [
             {
-              loader: 'raw-loader'
+              loader: "raw-loader",
             },
             {
-              loader: 'svgo-loader',
+              loader: "svgo-loader",
               options: {
                 plugins: [
                   { removeTitle: true, removeDesc: true },
                   { convertColors: { shorthex: false } },
                   { convertPathData: false },
-                ]
-              }
-            }
-          ]
+                ],
+              },
+            },
+          ],
         },
       ],
     },
