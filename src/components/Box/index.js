@@ -1,5 +1,5 @@
 import React, { PropTypes } from "react"
-import { Col } from "react-flexbox-grid/lib"
+import { Col } from "react-styled-flexboxgrid"
 
 import styles from "./index.css"
 

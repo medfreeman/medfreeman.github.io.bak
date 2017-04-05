@@ -1,6 +1,6 @@
 import React, { PropTypes } from "react"
 import Helmet from "react-helmet"
-import { Grid, Row } from "react-flexbox-grid/lib"
+import { Grid, Row } from "react-styled-flexboxgrid"
 import warning from "warning"
 import { BodyContainer, joinUri } from "phenomic"
 
