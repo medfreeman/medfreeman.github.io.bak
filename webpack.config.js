@@ -68,7 +68,6 @@ export default (config = {}) => {
           test: /\.css$/,
           exclude: [
             /\.global\.css$/,
-            /flexboxgrid/,
           ],
           include: path.resolve(__dirname, "src"),
           loader: ExtractTextPlugin.extract({
@@ -139,11 +138,21 @@ export default (config = {}) => {
         */
         {
           test: /\.css$/,
-          loader: "style-loader!css-loader?modules",
           include: [
             /flexboxgrid/,
             /driveway/,
           ],
+          loader: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              {
+                loader: "css-loader",
+                query: {
+                  modules: true
+                },
+              }
+            ]
+          })
         },
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).
