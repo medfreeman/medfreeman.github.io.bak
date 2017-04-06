@@ -1,8 +1,18 @@
-.panel {
+.gallery-item-sizer {
+  width: 232px;
+}
+
+.gallery-item-container {
+  width: 232px;
   padding: 5px;
 }
 
-.element {
+.gallery-item-container--large,
+.gallery-item-container--double {
+  width: 464px;
+}
+
+.gallery-item {
   padding: 0;
 
   & img {

@@ -140,7 +140,6 @@ export default (config = {}) => {
           test: /\.css$/,
           include: [
             /flexboxgrid/,
-            /driveway/,
           ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
@@ -303,6 +302,12 @@ export default (config = {}) => {
       filename: "[name].[hash].js",
     },
 
-    resolve: { extensions: [ ".js", ".json" ] },
+    resolve: {
+      alias: {
+        'masonry': 'masonry-layout',
+        'isotope': 'isotope-layout'
+      },
+      extensions: [ ".js", ".json" ]
+    },
   }
 }
