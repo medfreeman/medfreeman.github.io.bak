@@ -4,33 +4,20 @@ import Gallery from "../../components/Gallery"
 import Page from "../Page"
 
 const Portfolio = (props) => {
-  const galleryElements = props.head.gallery ?
-    props.head.gallery.map((element, index) => {
-      return (
-        <div key={ index }>
-          <a
-            href={ element.url }
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img src={ element.image } />
-          </a>
-        </div>
-      )
-    }) : []
-
   return (
     <Page { ...props }>
-      <Gallery>
-        { galleryElements }
-      </Gallery>
+      <Gallery elements={ props.head.gallery ? props.head.gallery : [] } />
     </Page>
   )
 }
 
 Portfolio.propTypes = {
-  head: React.PropTypes.shape({
-    gallery: PropTypes.array,
+  head: PropTypes.shape({
+    gallery: PropTypes.arrayOf(React.PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+    })).isRequired,
   }),
 }
 
