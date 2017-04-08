@@ -7,8 +7,6 @@ import Isotope from "../Isotope"
 
 import styles from "./index.css"
 
-require("isotope-packery")
-
 const Gallery = (props) => {
   const sizeArray = [
     "sm",

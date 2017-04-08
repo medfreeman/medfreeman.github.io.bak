@@ -18,6 +18,14 @@ class Isotope extends React.PureComponent {
 
         const Isotope = require("isotope-layout")
 
+        if (
+          typeof this.props.isoOptions.layoutMode !== 'undefined' &&
+          this.props.isoOptions.layoutMode === 'packery'
+        ) {
+          require("isotope-packery")
+
+        }
+
         if (this.iso == null) {
             this.iso = new Isotope(this.isotopeContainer, this.isoOptions);
         }
