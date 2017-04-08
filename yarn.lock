@@ -3105,13 +3105,6 @@ image-size@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.1.tgz#28eea8548a4b1443480ddddc1e083ae54652439f"
 
-imports-loader@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.7.1.tgz#f204b5f34702a32c1db7d48d89d5e867a0441253"
-  dependencies:
-    loader-utils "^1.0.2"
-    source-map "^0.5.6"
-
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
@@ -3450,7 +3443,7 @@ isomorphic-fetch@^2.1.1:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
-isotope-layout@^3.0.3:
+isotope-layout@^3.0.0, isotope-layout@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/isotope-layout/-/isotope-layout-3.0.3.tgz#07abac67f6f18f217b8b5a4fdbd76361d1cff203"
   dependencies:
@@ -3459,6 +3452,13 @@ isotope-layout@^3.0.3:
     get-size "^2.0.0"
     masonry-layout "^4.0.0"
     outlayer "^2.1.0"
+
+isotope-packery@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isotope-packery/-/isotope-packery-2.0.0.tgz#5dfd2f5802e2172b904fed460d34281d60db2235"
+  dependencies:
+    isotope-layout "^3.0.0"
+    packery "^2.0.0"
 
 isstream@~0.1.2:
   version "0.1.2"
@@ -4455,7 +4455,7 @@ osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-outlayer@^2.1.0:
+outlayer@^2.0.0, outlayer@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/outlayer/-/outlayer-2.1.0.tgz#83b7beefc19becd3278c8ade988d268788d6f93d"
   dependencies:
@@ -4470,6 +4470,13 @@ output-file-sync@^1.1.0:
     graceful-fs "^4.1.4"
     mkdirp "^0.5.1"
     object-assign "^4.1.0"
+
+packery@^2.0.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/packery/-/packery-2.1.1.tgz#ec3711e96562b5ae206641e06854f899064a1b55"
+  dependencies:
+    get-size "^2.0.2"
+    outlayer "^2.0.0"
 
 pako@~0.2.0:
   version "0.2.9"

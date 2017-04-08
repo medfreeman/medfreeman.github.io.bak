@@ -1,35 +1,51 @@
-/* eslint-disable react/jsx-no-bind */
+import path from "path"
 
 import React, { PropTypes } from "react"
+import cx from "classnames"
 
 import Isotope from "../Isotope"
 
 import styles from "./index.css"
 
+require("isotope-packery")
+
 const Gallery = (props) => {
+  const sizeArray = [
+    "sm",
+    "high",
+  ];
+
   return (
     <Isotope
       isoOptions={
         {
           itemSelector: `.${styles["gallery-item-container"]}`,
-          layoutMode: 'masonry',
-          masonry: {
-              // Using a sizer element is necessary to prevent a vertical collapse between data loads
-              // Ex. load all, then load metal, the metal will collapse into a vertical layout if this masonry: {}
-              // section is commented out.
-              columnWidth: `.${styles["gallery-item-sizer"]}`
+          layoutMode: 'packery',
+          packery: {
           },
-          //sortBy: 'name', // If you want to set the default sort, do that here.
-          getSortData: {
-          }
         }
       }
     >
-      <div className={ styles["gallery-item-sizer"] } />
       {
         props.elements.map((element, index) => {
+          let containerClass = "gallery-item-container--sm"
+          if ( ! /\.(png|jpe?g|svg)$/.test(element.image) ) {
+            const imageKey = path.basename(element.image)
+            const imageSize = sizeArray[Math.floor(Math.random()*sizeArray.length)]
+            containerClass = `gallery-item-container--${imageSize}`
+            console.log(containerClass)
+            element.image = path.join(element.image, `${imageKey}-${imageSize}.png` )
+          }
           return (
-            <div key={ index } className={ styles["gallery-item-container"] }>
+            <div
+              key={ index }
+              className={
+                cx(
+                  styles["gallery-item-container"],
+                  styles[containerClass],
+                )
+              }
+            >
               <div className={ styles["gallery-item"] }>
                 <a
                   href={ element.url }
@@ -48,7 +64,11 @@ const Gallery = (props) => {
 }
 
 Gallery.propTypes = {
-  elements: PropTypes.array,
+  elements: PropTypes.arrayOf(React.PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+  })).isRequired,
 }
 
 export default Gallery
