@@ -7,7 +7,6 @@ class Isotope extends React.PureComponent {
     constructor(props, context) {
         super(props, context);
 
-        // Copied from http://codepen.io/desandro/pen/nFrte
         this.filterFns = props.filterFns ? props.filterFns : {};
 
         this.isoOptions = props.isoOptions ? props.isoOptions : {};
