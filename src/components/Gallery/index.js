@@ -53,6 +53,7 @@ class Gallery extends React.Component {
   render() {
     return (
       <Isotope
+        className={ styles.gallery }
         isoOptions={
         {
           itemSelector: `.${styles["gallery-item-container"]}`,
