@@ -12,14 +12,14 @@ class Gallery extends React.Component {
     super(props, context)
 
     this.sizeArray = [
-      "sm",
+      "small",
       "large",
       "high",
       "double"
     ]
 
     this.elements = this.props.elements.map((element, index) => {
-      let containerClass = "gallery-item-container--sm"
+      let containerClass = "gallery-item-container--small"
       let elementImage = element.image
       if ( ! /\.(png|jpe?g|svg)$/.test(element.image) ) {
         const imageKey = path.basename(element.image)
