@@ -2198,6 +2198,12 @@ eslint-loader@^1.7.1:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
+eslint-plugin-flowtype@^2.30.4:
+  version "2.30.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.30.4.tgz#771d6bb4578ab8598e9c58018fea2e1a22946249"
+  dependencies:
+    lodash "^4.15.0"
+
 eslint-plugin-import@^1.7.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-1.16.0.tgz#b2fa07ebcc53504d0f2a4477582ec8bff1871b9f"
@@ -2313,7 +2319,7 @@ etag@~1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.0.tgz#6f631aef336d6c46362b51764044ce216be3c051"
 
-ev-emitter@^1.0.0:
+ev-emitter@^1.0.0, ev-emitter@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.0.3.tgz#ee5ef74b6ed28d911b32ddcbfc97867f580937bc"
 
@@ -3104,6 +3110,12 @@ image-size@^0.4.0:
 image-size@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.1.tgz#28eea8548a4b1443480ddddc1e083ae54652439f"
+
+imagesloaded@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/imagesloaded/-/imagesloaded-4.1.1.tgz#53b5b66615360850a5a264b1293e7f4d06d3bd51"
+  dependencies:
+    ev-emitter "~1.0.0"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
