@@ -17,10 +17,7 @@ class Isotope extends React.PureComponent {
       return
     }
 
-    if (
-      typeof this.props.isoOptions.layoutMode !== 'undefined' &&
-      this.props.isoOptions.layoutMode === 'packery'
-    ) {
+    if ( this.props.isoOptions.layoutMode === 'packery' ) {
       require("isotope-packery")
 
     }
@@ -83,7 +80,7 @@ class Isotope extends React.PureComponent {
 
   render() {
     return (
-      <div className="isotope" ref={ node => this.isotopeContainer = node }>
+      <div className={ this.props.className } ref={ node => this.isotopeContainer = node }>
         { this.props.children }
       </div>
     )
@@ -91,12 +88,16 @@ class Isotope extends React.PureComponent {
 }
 
 Isotope.defaultProps = {
-  isoOptions: {},
+  className: "",
+  isoOptions: {
+    layoutMode: "masonry"
+  },
   disableImagesLoaded: false,
 }
 
 Isotope.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   isoOptions: PropTypes.object,
   disableImagesLoaded: React.PropTypes.bool,
 }
