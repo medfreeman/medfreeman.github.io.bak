@@ -20,11 +20,12 @@ class Gallery extends React.Component {
 
     this.elements = this.props.elements.map((element, index) => {
       let containerClass = "gallery-item-container--sm"
+      let elementImage = element.image
       if ( ! /\.(png|jpe?g|svg)$/.test(element.image) ) {
         const imageKey = path.basename(element.image)
         const imageSize = this.sizeArray[Math.floor(Math.random()*this.sizeArray.length)]
         containerClass = `gallery-item-container--${imageSize}`
-        element.image = path.join(element.image, `${imageKey}-${imageSize}.png` )
+        elementImage = path.join(element.image, `${imageKey}-${imageSize}.png` )
       }
       return (
         <div
@@ -42,7 +43,7 @@ class Gallery extends React.Component {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={ element.image } />
+              <img src={ elementImage } />
             </a>
           </div>
         </div>
