@@ -10,7 +10,9 @@ import styles from "./index.css"
 const Gallery = (props) => {
   const sizeArray = [
     "sm",
+    "large",
     "high",
+    "double"
   ];
 
   return (
