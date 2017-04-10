@@ -4,8 +4,8 @@ import React, { PropTypes } from "react"
 import _ from "lodash"
 
 const isBrowser = (typeof window !== 'undefined')
-const IsotopeLayout = isBrowser ? require("isotope-layout") : null;
-const imagesloaded = isBrowser ? require("imagesloaded") : null;
+const IsotopeLayout = isBrowser ? require("isotope-layout") : null
+const imagesloaded = isBrowser ? require("imagesloaded") : null
 
 class Isotope extends React.PureComponent {
   constructor(props, context) {
@@ -49,7 +49,7 @@ class Isotope extends React.PureComponent {
     const removeKeys = _.difference(currentKeys, newKeys)
 
     if (removeKeys.length > 0) {
-      _.each(removeKeys, removeKey => this.iso.remove(document.getElementById(removeKey)));
+      _.each(removeKeys, removeKey => this.iso.remove(document.getElementById(removeKey)))
       this.scheduleArrange()
     }
     if (addKeys.length > 0) {
@@ -78,7 +78,7 @@ class Isotope extends React.PureComponent {
       function() {
         this.iso.arrange()
       }.bind(this)
-    );
+    )
   }
 
   render() {

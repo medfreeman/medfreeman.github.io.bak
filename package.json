@@ -83,7 +83,11 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": "eslint-config-i-am-meticulous/react"
+    "extends": "eslint-config-i-am-meticulous/react",
+    "rules": {
+      "indent": ["error", 2],
+      "semi": [1, "never"]
+    }
   },
   "stylelint": {
     "extends": "./node_modules/phenomic/lib/stylelint-config-recommended/index.js",

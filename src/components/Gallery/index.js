@@ -54,12 +54,12 @@ class Gallery extends React.Component {
     return (
       <Isotope
         isoOptions={
-          {
-            itemSelector: `.${styles["gallery-item-container"]}`,
-            layoutMode: 'packery',
-            packery: {
-            },
-          }
+        {
+          itemSelector: `.${styles["gallery-item-container"]}`,
+          layoutMode: 'packery',
+          packery: {
+          },
+        }
         }
       >
         {
