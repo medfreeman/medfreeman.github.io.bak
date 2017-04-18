@@ -2,6 +2,7 @@ import path from "path"
 
 import React, { PropTypes } from "react"
 import cx from "classnames"
+import _ from "lodash"
 
 import Isotope from "../Isotope"
 
@@ -18,7 +19,7 @@ class Gallery extends React.Component {
       "double"
     ]
 
-    this.elements = this.props.elements.map((element, index) => {
+    this.elements = _.shuffle(this.props.elements).map((element, index) => {
       let containerClass = "gallery-item-container--small"
       let elementImage = element.image
       if ( ! /\.(png|jpe?g|svg)$/.test(element.image) ) {
@@ -60,6 +61,7 @@ class Gallery extends React.Component {
           itemSelector: `.${styles["gallery-item-container"]}`,
           layoutMode: 'packery',
           packery: {
+            gutter: 10
           },
         }
         }
