@@ -2198,12 +2198,6 @@ eslint-loader@^1.7.1:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
-eslint-plugin-flowtype@^2.30.4:
-  version "2.30.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.30.4.tgz#771d6bb4578ab8598e9c58018fea2e1a22946249"
-  dependencies:
-    lodash "^4.15.0"
-
 eslint-plugin-import@^1.7.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-1.16.0.tgz#b2fa07ebcc53504d0f2a4477582ec8bff1871b9f"
@@ -4049,13 +4043,13 @@ mime-db@~1.27.0:
   version "1.27.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
 
-mime-types@2.1.13, mime-types@~2.1.11:
+mime-types@2.1.13:
   version "2.1.13"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.13.tgz#e07aaa9c6c6b9a7ca3012c69003ad25a39e92a88"
   dependencies:
     mime-db "~1.25.0"
 
-mime-types@^2.1.11, mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.7:
+mime-types@^2.1.11, mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.7:
   version "2.1.15"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed"
   dependencies:
@@ -4641,9 +4635,9 @@ phantomjs-prebuilt@^2.1.10:
     request-progress "~2.0.1"
     which "~1.2.10"
 
-phenomic@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/phenomic/-/phenomic-0.21.0.tgz#ba147b1f6103ddf2e1bd4d4fcb7420a1bd046370"
+phenomic@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/phenomic/-/phenomic-0.21.1.tgz#d9677fe01cf0dbeb6b228986b31c8afa2d3ab48d"
   dependencies:
     babel-polyfill "^6.5.0"
     babel-register "^6.6.5"
