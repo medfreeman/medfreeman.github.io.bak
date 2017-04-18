@@ -3,7 +3,7 @@
 ## Install dependencies
 
 ```sh
-yarn install
+yarn
 ```
 
 ## Run development server
