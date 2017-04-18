@@ -47,7 +47,11 @@ class Gallery extends React.Component {
             >
               <img src={ elementImage } />
               <div className={ styles["gallery-item-overlay"] }>
-                <h2>{ element.name }</h2>
+                <h2>{ element.title }</h2>
+                {element.subtitle &&
+                  <h3>{ element.subtitle }</h3>
+                }
+                <span>{ element.year }</span>
               </div>
             </a>
           </div>
@@ -79,8 +83,10 @@ class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-  elements: PropTypes.arrayOf(React.PropTypes.shape({
-    name: PropTypes.string.isRequired,
+  elements: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    year: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
   })).isRequired,

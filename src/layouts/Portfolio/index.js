@@ -13,8 +13,10 @@ const Portfolio = (props) => {
 
 Portfolio.propTypes = {
   head: PropTypes.shape({
-    gallery: PropTypes.arrayOf(React.PropTypes.shape({
-      name: PropTypes.string.isRequired,
+    gallery: PropTypes.arrayOf(PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      subtitle: PropTypes.string,
+      year: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
     })).isRequired,
