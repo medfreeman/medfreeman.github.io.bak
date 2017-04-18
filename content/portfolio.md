@@ -1,33 +1,55 @@
 ---
 title: Portfolio
 layout: Portfolio
-hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
-# hero credit: https://www.flickr.com/photos/pslee999/15589950511/
-cta:
-  label: Discover Phenomic now
-  link: "https://phenomic.io/"
-  props:
-    big: true
+gallery:
+  - title: "1PlusX"
+    subtitle: "From data to predictions"
+    year: "2017"
+    url: "http://www.1plusx.com"
+    image: "../assets/gallery/1plusX"
+  - title: "Superposition"
+    subtitle: "design et communication pour papier et écran"
+    year: "2013"
+    url: "http://www.superposition.info/"
+    image: "../assets/gallery/superposition"
+  - title: "Mapping Festival"
+    subtitle: ""
+    year: "2011"
+    url: "http://www.mappingfestival.com/2011/"
+    image: "../assets/gallery/mapping2011"
+  - title: "Mapping Festival"
+    subtitle: ""
+    year: "2012"
+    url: "http://www.mappingfestival.com/2012/"
+    image: "../assets/gallery/mapping2012"
+  - title: "Mapping Festival"
+    subtitle: ""
+    year: "2013"
+    url: "http://www.mappingfestival.com/2013/"
+    image: "../assets/gallery/mapping-2013.svg"
+  - title: "Mapping Festival"
+    subtitle: ""
+    year: "2014"
+    url: "http://www.mappingfestival.com/2014/"
+    image: "../assets/gallery/mapping2014"
+  - title: "ReverseHead"
+    subtitle: "visuals and performers booking agency"
+    year: "2012"
+    url: "http://reversehead.com/"
+    image: "../assets/gallery/reverseHead"
+  - title: "Les films du Tigre"
+    subtitle: "mettez un film dans votre vie"
+    year: "2015"
+    url: "http://lesfilmsdutigre.com/"
+    image: "../assets/gallery/filmsduTigre"
+  - title: "L'Usine"
+    subtitle: "centre culturel autogéré - genève"
+    year: "2013"
+    url: "https://www.usine.ch/"
+    image: "../assets/gallery/usine"
+  - title: "Sylvie Lahlou"
+    subtitle: "Cabinet de psychologie clinique"
+    year: "2013"
+    url: "http://www.sylvie-lahlou.fr/"
+    image: "../assets/gallery/sylvie"
 ---
-
-You are currently viewing Phenomic base theme.
-
-For now [Phenomic does not provide a native way to extend themes](https://github.com/MoOx/phenomic/issues/508) but since it's based on
-React and uses a component approach, it's pretty easy to make your own reusable collection of layouts and components.
-
----
-
-This website is made with [Phenomic](https://phenomic.io/).
-
-If you are curious about it, you can take a look at
-[existing websites that use Phenomic](https://phenomic.io/showcase/),
-some projects share their source code!
-
-<!-- demo to show you that you can use "assets" folder -->
-<small>
-  Built with
-  <a href="https://facebook.github.io/react/">
-    <img alt="" src="../assets/react.svg" width="16" height="16" />
-    React
-  </a>.
-</small>
