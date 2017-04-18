@@ -9,6 +9,8 @@ module.exports = (config) => [
           contentHorizontalPadding: "2.0rem",
           headerHeight: "50px",
           galleryElementPadding: "5px",
+          galleryElementOverlayBackgroundColor: "rgba(0,0,0,0.65)",
+          galleryElementOverlayTextColor: "#FFF",
           colorPrimaryDark: "#000",
           colorPrimary: "#007acc",
           colorSecondaryDark: "#22846C",

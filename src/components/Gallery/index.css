@@ -63,9 +63,9 @@
 
   padding: 10px;
 
-  background: rgba(0,0,0,0.65);
+  background: var(--galleryElementOverlayBackgroundColor);
   opacity: 0;
   transition: opacity 0.5s;
 
-  color: #FFF;
+  color: var(--galleryElementOverlayTextColor);
 }
