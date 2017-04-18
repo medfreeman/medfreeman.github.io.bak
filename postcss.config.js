@@ -8,6 +8,7 @@ module.exports = (config) => [
           maxWidth: "100vw",
           contentHorizontalPadding: "2.0rem",
           headerHeight: "50px",
+          galleryElementPadding: "5px",
           colorPrimaryDark: "#000",
           colorPrimary: "#007acc",
           colorSecondaryDark: "#22846C",

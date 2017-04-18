@@ -46,6 +46,9 @@ class Gallery extends React.Component {
               rel="noreferrer noopener"
             >
               <img src={ elementImage } />
+              <div className={ styles["gallery-item-overlay"] }>
+                <h2>{ element.name }</h2>
+              </div>
             </a>
           </div>
         </div>
