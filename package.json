@@ -85,8 +85,14 @@
     "root": true,
     "extends": "eslint-config-i-am-meticulous/react",
     "rules": {
-      "indent": ["error", 2],
-      "semi": [1, "never"]
+      "indent": [
+        "error",
+        2
+      ],
+      "semi": [
+        1,
+        "never"
+      ]
     }
   },
   "stylelint": {
@@ -126,6 +132,7 @@
     "postcss-cssnext": "^2.4.0",
     "postcss-loader": "^1.3.3",
     "postcss-reporter": "^3.0.0",
+    "random-weighted-choice": "^0.1.3",
     "raw-loader": "^0.5.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",

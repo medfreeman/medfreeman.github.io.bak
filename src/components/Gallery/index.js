@@ -3,6 +3,7 @@ import path from "path"
 import React, { PropTypes } from "react"
 import cx from "classnames"
 import _ from "lodash"
+import rwc from "random-weighted-choice"
 
 import Isotope from "../Isotope"
 
@@ -13,10 +14,10 @@ class Gallery extends React.Component {
     super(props, context)
 
     this.sizeArray = [
-      "small",
-      "large",
-      "high",
-      "double"
+      { weight: 8, id: "small"},
+      { weight: 4, id: "large"},
+      { weight: 4, id: "high"},
+      { weight: 1, id: "double"}
     ]
 
     this.elements = _.shuffle(this.props.elements).map((element, index) => {
@@ -24,7 +25,7 @@ class Gallery extends React.Component {
       let elementImage = element.image
       if ( ! /\.(png|jpe?g|svg)$/.test(element.image) ) {
         const imageKey = path.basename(element.image)
-        const imageSize = this.sizeArray[Math.floor(Math.random()*this.sizeArray.length)]
+        const imageSize = rwc(this.sizeArray)
         containerClass = `gallery-item-container--${imageSize}`
         elementImage = path.join(element.image, `${imageKey}-${imageSize}.png` )
       }
