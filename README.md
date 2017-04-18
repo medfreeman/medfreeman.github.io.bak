@@ -15,5 +15,5 @@ yarn start
 ## Build for production
 
 ```sh
-yarn run build
+yarn build
 ```
