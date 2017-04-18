@@ -69,3 +69,7 @@
 
   color: var(--galleryElementOverlayTextColor);
 }
+
+.gallery-item-subtitle {
+  font-weight: 300;
+}

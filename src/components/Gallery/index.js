@@ -49,7 +49,7 @@ class Gallery extends React.Component {
               <div className={ styles["gallery-item-overlay"] }>
                 <h2>{ element.title }</h2>
                 {element.subtitle &&
-                  <h3>{ element.subtitle }</h3>
+                  <h4 className={ styles["gallery-item-subtitle"] }>{ element.subtitle }</h4>
                 }
                 <span>{ element.year }</span>
               </div>
