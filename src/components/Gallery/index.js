@@ -17,7 +17,7 @@ class Gallery extends React.Component {
       { weight: 8, id: "small"},
       { weight: 4, id: "large"},
       { weight: 4, id: "high"},
-      { weight: 1, id: "double"}
+      { weight: 2, id: "double"}
     ]
 
     this.elements = _.shuffle(this.props.elements).map((element, index) => {
