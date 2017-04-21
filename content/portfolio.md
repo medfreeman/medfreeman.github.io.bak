@@ -52,4 +52,9 @@ gallery:
     year: "2013"
     url: "http://www.sylvie-lahlou.fr/"
     image: "../assets/gallery/sylvie"
+  - title: "Intérieur Nuit"
+    subtitle: ""
+    year: "2016"
+    url: "http://www.interieur-nuit.com/"
+    image: "../assets/gallery/interieurNuit"
 ---
