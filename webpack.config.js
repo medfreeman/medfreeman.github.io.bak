@@ -39,9 +39,10 @@ export default (config = {}) => {
           loader: phenomicLoader,
           query: {
             context: path.join(__dirname, config.source),
-            // plugins: [
-            //   ...require("phenomic/lib/loader-preset-markdown").default
-            // ]
+            plugins: [
+              ...require("phenomic/lib/loader-preset-default").default,
+              require("phenomic/lib/loader-plugin-markdown-init-head.description-property-from-content").default,
+            ]
             // see https://phenomic.io/docs/usage/plugins/
           },
         },

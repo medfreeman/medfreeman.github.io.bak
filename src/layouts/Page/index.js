@@ -2,10 +2,11 @@ import React, { PropTypes } from "react"
 import Helmet from "react-helmet"
 import { Grid, Row } from "react-styled-flexboxgrid"
 import warning from "warning"
-import { BodyContainer, joinUri } from "phenomic"
+import { joinUri } from "phenomic"
 
 import Loading from "../../components/Loading"
 import Box from "../../components/Box"
+import MarkdownBodyContainer from "../../components/MarkdownBodyContainer"
 
 import styles from "./index.css"
 
@@ -78,7 +79,7 @@ const Page = (
           {
             isLoading
             ? <Loading />
-            : <BodyContainer>{ body }</BodyContainer>
+            : <MarkdownBodyContainer>{ body }</MarkdownBodyContainer>
           }
         </div>
         { children }
