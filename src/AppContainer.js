@@ -1,8 +1,11 @@
+/* eslint-disable import/max-dependencies */
+
 import React from "react"
 import PropTypes from "prop-types"
 
 import "./index.global.css"
 import "./highlight.global.css"
+import "../fonts/medfreeman.font.js"
 
 import Container from "./components/Container"
 import DefaultHeadMeta from "./components/DefaultHeadMeta"

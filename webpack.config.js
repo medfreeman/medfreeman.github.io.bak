@@ -154,6 +154,16 @@ export default (config = {}) => {
             ]
           })
         },
+        {
+          test: /\.font\.js$/,
+          loader: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              "css-loader",
+              "webfonts-loader",
+            ]
+          })
+        },
         // ! \\ if you want to use Sass or LESS, you can add sass-loader or
         // less-loader after postcss-loader (or replacing it).
         // ! \\ You will also need to adjust the file extension
@@ -167,7 +177,33 @@ export default (config = {}) => {
 
         // copy assets and return generated path in js
         {
-          test: /\.(html|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff|woff2)$/,
+          test: /\.woff(2)?(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+          loader: "url-loader",
+          include: [
+            /Medcons/,
+          ],
+          query: {
+            limit: 10000,
+            mimetype: "application/font-woff",
+            name: "[path][name].[hash].[ext]",
+          }
+        },
+        {
+          test: /\.(eot|ttf|otf|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+          loader: "file-loader",
+          include: [
+            /Medcons/,
+          ],
+          query: {
+            name: "[path][name].[hash].[ext]",
+          }
+        },
+
+        {
+          test: /\.(html|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff(2)?)$/,
+          exclude: [
+            /Medcons/,
+          ],
           loader: "file-loader",
           query: {
             name: "[path][name].[hash].[ext]",
@@ -178,6 +214,9 @@ export default (config = {}) => {
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
+          include: [
+            path.resolve(__dirname, "src/icons"),
+          ],
           use: [
             {
               loader: "raw-loader",

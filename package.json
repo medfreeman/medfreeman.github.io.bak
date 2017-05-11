@@ -7,6 +7,7 @@
   "twitter": "",
   "repository": "https://github.com/medfreeman/medfreeman.github.io.git",
   "scripts": {
+    "install": "napa Templarian/MaterialDesign:mdi",
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint": "npm-run-all --parallel lint:*",
@@ -141,6 +142,8 @@
     "isotope-layout": "^3.0.3",
     "isotope-packery": "^2.0.0",
     "lodash": "^4.17.4",
+    "material-design-icons": "^3.0.1",
+    "napa": "^2.3.0",
     "npm-run-all": "^4.0.2",
     "phenomic": "^0.21.1",
     "postcss-browser-reporter": "^0.5.0",
@@ -171,8 +174,17 @@
     "stylelint": "^7.2.0",
     "svgo": "^0.7.2",
     "svgo-loader": "^1.2.1",
+    "url-loader": "^0.5.8",
     "warning": "^3.0.0",
+    "webfonts-loader": "^1.1.0",
+    "webfonts-generator": "sunflowerdeath/webfonts-generator#3f52b4e",
     "webpack": "^2.3.0",
     "whatwg-fetch": "^2.0.3"
+  },
+  "resolutions": {
+    "webfonts-generator": "sunflowerdeath/webfonts-generator#3f52b4e"
+  },
+  "optionalDependencies": {
+    "mdi": "^1.9.33"
   }
 }
