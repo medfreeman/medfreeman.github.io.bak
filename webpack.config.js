@@ -138,23 +138,6 @@ export default (config = {}) => {
         },
         */
         {
-          test: /\.css$/,
-          include: [
-            /flexboxgrid/,
-          ],
-          loader: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: [
-              {
-                loader: "css-loader",
-                query: {
-                  modules: true
-                },
-              }
-            ]
-          })
-        },
-        {
           test: /\.font\.js$/,
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
