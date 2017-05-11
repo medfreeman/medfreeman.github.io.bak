@@ -1,7 +1,7 @@
 import React from "react"
 import Svg from "react-svg-inline"
 
-import reactSvg from "../icons/react.svg"
+import reactSvg from "../../icons/react.svg"
 
 import styles from "./index.css"
 

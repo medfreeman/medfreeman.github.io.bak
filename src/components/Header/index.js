@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import { Link } from "phenomic"
 import Svg from "react-svg-inline"
 
-import logoSvg from "../icons/medfreeman_3d_dark.svg"
-import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-import gitHubSvg from "../icons/iconmonstr-github-1.svg"
+import logoSvg from "../../icons/medfreeman_3d_dark.svg"
+import twitterSvg from "../../icons/iconmonstr-twitter-1.svg"
+import gitHubSvg from "../../icons/iconmonstr-github-1.svg"
 
 import styles from "./index.css"
 
