@@ -305,8 +305,8 @@ export default (config = {}) => {
 
     resolve: {
       alias: {
-        'masonry': 'masonry-layout',
-        'isotope': 'isotope-layout'
+        "masonry": "masonry-layout",
+        "isotope": "isotope-layout"
       },
       extensions: [ ".js", ".json" ]
     },

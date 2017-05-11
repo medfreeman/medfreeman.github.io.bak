@@ -89,8 +89,20 @@
         "error",
         2
       ],
+      "quotes": [
+        "error",
+        "double"
+      ],
       "semi": [
-        1,
+        "error",
+        "never"
+      ],
+      "react/jsx-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "react/jsx-equals-spacing": [
+        "error",
         "never"
       ]
     }

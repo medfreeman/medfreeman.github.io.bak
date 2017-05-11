@@ -4,7 +4,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import _ from "lodash"
 
-const isBrowser = (typeof window !== 'undefined')
+const isBrowser = (typeof window !== "undefined")
 const IsotopeLayout = isBrowser ? require("isotope-layout") : null
 const imagesloaded = isBrowser ? require("imagesloaded") : null
 
@@ -18,7 +18,7 @@ class Isotope extends React.PureComponent {
       return
     }
 
-    if ( this.props.isoOptions.layoutMode === 'packery' ) {
+    if ( this.props.isoOptions.layoutMode === "packery" ) {
       require("isotope-packery")
 
     }
@@ -28,7 +28,7 @@ class Isotope extends React.PureComponent {
     }
 
     // Only arrange if there are elements to arrange
-    if (_.get(this, 'props.children.length', 0) > 0) {
+    if (_.get(this, "props.children.length", 0) > 0) {
       this.scheduleArrange()
     }
   }

@@ -68,7 +68,7 @@ class Gallery extends React.Component {
         isoOptions={
         {
           itemSelector: `.${styles["gallery-item-container"]}`,
-          layoutMode: 'packery',
+          layoutMode: "packery",
           packery: {
             gutter: 10
           },
