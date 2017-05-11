@@ -5,6 +5,7 @@ import { joinUri } from "phenomic"
 
 const DefaultHeadMeta = (props, { metadata: { pkg } }) => {
   const phenomicAssetsUrl = joinUri(process.env.PHENOMIC_USER_URL, pkg.phenomic.assets)
+  const faviconVersionString = "?v=1"
   return (
     <div hidden>
       <Helmet
@@ -37,17 +38,17 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => {
             rel: "icon",
             type: "image/png",
             sizes: "32x32",
-            href: `${ phenomicAssetsUrl }/favicon-32x32.png?v=1`,
+            href: `${ phenomicAssetsUrl }/favicon-32x32.png${ faviconVersionString }`,
           },
           {
             rel: "icon",
             type: "image/png",
             sizes: "16x16",
-            href: `${ phenomicAssetsUrl }/favicon-16x16.png?v=1`,
+            href: `${ phenomicAssetsUrl }/favicon-16x16.png${ faviconVersionString }`,
           },
           {
             rel: "shortcut icon",
-            href: `${ phenomicAssetsUrl }/favicon.ico?v=1`,
+            href: `${ phenomicAssetsUrl }/favicon.ico${ faviconVersionString }`,
           },
         ] }
       />
@@ -57,62 +58,62 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => {
           link={ [
             {
               rel: "manifest",
-              href: `${ phenomicAssetsUrl }/manifest.json?v=1`,
+              href: `${ phenomicAssetsUrl }/manifest.json${ faviconVersionString }`,
             },
             {
               rel: "yandex-tableau-widget",
-              href: `${ phenomicAssetsUrl }/yandex-browser-manifest.json?v=1`,
+              href: `${ phenomicAssetsUrl }/yandex-browser-manifest.json${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "57x57",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-57x57.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-57x57.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "60x60",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-60x60.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-60x60.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "72x72",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-72x72.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-72x72.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "76x76",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-76x76.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-76x76.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "114x114",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-114x114.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-114x114.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "120x120",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-120x120.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-120x120.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "144x144",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-144x144.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-144x144.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "152x152",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-152x152.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-152x152.png${ faviconVersionString }`,
             },
             {
               rel: "apple-touch-icon",
               sizes: "180x180",
-              href: `${ phenomicAssetsUrl }/apple-touch-icon-180x180.png?v=1`,
+              href: `${ phenomicAssetsUrl }/apple-touch-icon-180x180.png${ faviconVersionString }`,
             },
             {
               rel: "icon",
               type: "image/png",
               sizes: "192x192",
-              href: `${ phenomicAssetsUrl }/android-chrome-192x192.png?v=1`,
+              href: `${ phenomicAssetsUrl }/android-chrome-192x192.png${ faviconVersionString }`,
             },
           ] }
           meta={ [
@@ -146,11 +147,11 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => {
             },
             {
               name: "msapplication-TileImage",
-              content: `${ phenomicAssetsUrl }/mstile-144x144.png?v=1`,
+              content: `${ phenomicAssetsUrl }/mstile-144x144.png${ faviconVersionString }`,
             },
             {
               name: "msapplication-config",
-              content: `${ phenomicAssetsUrl }/browserconfig.xml?v=1`,
+              content: `${ phenomicAssetsUrl }/browserconfig.xml${ faviconVersionString }`,
             },
           ] }
         />
