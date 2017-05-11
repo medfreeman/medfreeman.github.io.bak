@@ -246,7 +246,7 @@ export default (config = {}) => {
       ...config.dev && [
         new FaviconsWebpackPlugin({
           logo: path.join(__dirname, "favicon.png"),
-          prefix: "assets/",
+          prefix: pkg.phenomic.assets + "/",
           persistentCache: false,
           inject: false,
           icons: {
@@ -274,7 +274,7 @@ export default (config = {}) => {
           appDescription: pkg.description,
           developerName: pkg.author,
           developerURL: pkg.homepage,
-          prefix: "assets/",
+          prefix: pkg.phenomic.assets + "/",
           persistentCache: false,
           inject: false,
           background: "#000",
