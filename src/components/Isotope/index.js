@@ -100,7 +100,7 @@ Isotope.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   isoOptions: PropTypes.object,
-  disableImagesLoaded: React.PropTypes.bool,
+  disableImagesLoaded: PropTypes.bool,
 }
 
 export default Isotope
