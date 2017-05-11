@@ -153,7 +153,7 @@
     "remark-react-lowlight": "^0.4.1",
     "remark-slug": "^4.2.2",
     "remark-toc": "^4.0.0",
-    "style-loader": "^0.16.1",
+    "style-loader": "^0.17.0",
     "styled-components": "^1.4.4",
     "stylelint": "^7.2.0",
     "svgo": "^0.7.2",
