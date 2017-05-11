@@ -19,7 +19,7 @@ const MarkdownBodyContainer = props => {
 }
 
 MarkdownBodyContainer.propTypes = {
-  children: PropTypes.string,   // Markdown post containing the react-div
+  children: PropTypes.string,
 }
 
 export default MarkdownBodyContainer
