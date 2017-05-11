@@ -158,7 +158,7 @@ export default (config = {}) => {
             fallback: "style-loader",
             use: [
               "css-loader",
-              "webfonts-loader",
+              "webfonts-loader?fileName=fonts/[fontname].[hash].[ext]",
             ]
           })
         },
@@ -175,7 +175,7 @@ export default (config = {}) => {
 
         // copy assets and return generated path in js
         {
-          test: /\.woff(2)?(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+          test: /\.woff(2)?$/,
           loader: "url-loader",
           include: [
             /Medcons/,
@@ -184,18 +184,44 @@ export default (config = {}) => {
           query: {
             limit: 10000,
             mimetype: "application/font-woff",
-            name: "[path][name].[hash].[ext]",
+            name: "fonts/[name].[hash].[ext]",
           }
         },
         {
-          test: /\.(eot|ttf|otf|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+          test: /\.ttf$/,
+          loader: "url-loader",
+          include: [
+            /Medcons/,
+            /typeface-roboto/,
+          ],
+          query: {
+            limit: 10000,
+            mimetype: "application/octet-stream",
+            name: "fonts/[name].[hash].[ext]",
+          }
+        },
+        {
+          test: /\.svg$/,
+          loader: "url-loader",
+          include: [
+            /Medcons/,
+            /typeface-roboto/,
+          ],
+          query: {
+            limit: 10000,
+            mimetype: "image/svg+xml",
+            name: "fonts/[name].[hash].[ext]",
+          }
+        },
+        {
+          test: /\.eot$/,
           loader: "file-loader",
           include: [
             /Medcons/,
             /typeface-roboto/,
           ],
           query: {
-            name: "[path][name].[hash].[ext]",
+            name: "fonts/[name].[hash].[ext]",
           }
         },
 
