@@ -70,7 +70,10 @@ export default (config = {}) => {
           exclude: [
             /\.global\.css$/,
           ],
-          include: path.resolve(__dirname, "src"),
+          include: [
+            path.resolve(__dirname, "src"),
+            /react-toolbox/,
+          ],
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: [
@@ -138,6 +141,18 @@ export default (config = {}) => {
         },
         */
         {
+          test: /\.css$/,
+          include: [
+            /typeface-roboto/,
+          ],
+          loader: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              "css-loader",
+            ]
+          })
+        },
+        {
           test: /\.font\.js$/,
           loader: ExtractTextPlugin.extract({
             fallback: "style-loader",
@@ -164,6 +179,7 @@ export default (config = {}) => {
           loader: "url-loader",
           include: [
             /Medcons/,
+            /typeface-roboto/,
           ],
           query: {
             limit: 10000,
@@ -176,6 +192,7 @@ export default (config = {}) => {
           loader: "file-loader",
           include: [
             /Medcons/,
+            /typeface-roboto/,
           ],
           query: {
             name: "[path][name].[hash].[ext]",
@@ -186,6 +203,7 @@ export default (config = {}) => {
           test: /\.(html|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff(2)?)$/,
           exclude: [
             /Medcons/,
+            /typeface-roboto/,
           ],
           loader: "file-loader",
           query: {

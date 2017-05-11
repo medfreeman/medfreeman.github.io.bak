@@ -3,6 +3,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import "typeface-roboto"
+
 import "./index.global.css"
 import "./highlight.global.css"
 import "../fonts/medfreeman.font.js"
