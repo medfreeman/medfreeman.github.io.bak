@@ -16,7 +16,8 @@
   },
   "phenomic": {
     "assets": "assets",
-    "CNAME": false
+    "CNAME": false,
+    "devHost": "localhost"
   },
   "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
   "babel": {
