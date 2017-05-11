@@ -5821,11 +5821,12 @@ react-styled-flexboxgrid@^1.0.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-1.1.2.tgz#3b0b45b1a8821f35f80ea2a7ee70d44b863b2c15"
 
-react-svg-inline@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-svg-inline/-/react-svg-inline-1.2.0.tgz#a02bf81a0ed7615e3194a014b58d98aea5521fd5"
+react-svg-inline@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-svg-inline/-/react-svg-inline-2.0.0.tgz#0a4f60895588eecc7616af3a511d087801163600"
   dependencies:
     classnames "^2.2.1"
+    prop-types "^15.5.8"
 
 react-topbar-progress-indicator@^1.0.0:
   version "1.0.0"
