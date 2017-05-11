@@ -31,5 +31,5 @@ module.exports = {
     return path.basename(filename, ".svg")
   },
   "fixedWidth": true,
-  "types": ["eot", "woff2", "woff", "ttf"],
+  "types": ["eot", "woff", "ttf"],
 }
