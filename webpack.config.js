@@ -28,6 +28,10 @@ export default (config = {}) => {
     ...config.dev && {
       devtool: "#cheap-module-eval-source-map",
     },
+    node: {
+      dns: "mock",
+      net: "mock"
+    },
     module: {
       noParse: /\.min\.js/,
       rules: [
@@ -42,6 +46,7 @@ export default (config = {}) => {
             plugins: [
               ...require("phenomic/lib/loader-preset-default").default,
               require("phenomic/lib/loader-plugin-markdown-init-head.description-property-from-content").default,
+              require("./src/plugins/loader-plugin-markdown-transform-body-property-to-html"),
             ]
             // see https://phenomic.io/docs/usage/plugins/
           },

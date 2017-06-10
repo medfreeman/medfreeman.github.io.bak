@@ -27,3 +27,11 @@ and for colors and common CSS variables, you can modify ``postcss.config.js``.
 
 _You feel like the base theme is not enough or you just saw something wrong?_
 [Please help us make Phenomic better!](https://phenomic.io/contributing/)
+
+!Icon{ icon=done #huuurg .hiii #yeeah .hoooo blaaa tooltip="That's alright folks !" }
+
+!Icon[Hello](mf-done_all){ floating }
+
+!Icon[Ring my bell](mf-react)
+
+!Blaargh()
